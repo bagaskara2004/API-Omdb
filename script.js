@@ -9,7 +9,7 @@ btnSearch.addEventListener("click",async function (e) {
         const data = makeCard(movies);
         pushContent(data);
     } catch (error) {
-        const data = `<div class="popup">${error}</div>`
+        const data = `<div class="error">${error}</div>`
         pushContent(data)
     }
 })
@@ -41,7 +41,7 @@ function makeCard(movies) {
     return card;
 }
 function loading() {
-    const data = `<div class="popup">Loading....</div>`;
+    const data = `<div class="loading"></div>`;
     pushContent(data)
 }
 function pushContent(data) {
